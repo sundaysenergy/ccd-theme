@@ -1,0 +1,13 @@
+<ul>
+  {{#navigation}}
+  <li><a href="{{path}}">{{title}}</a>
+      {{#has_children}}
+        <ul>
+          {{#children}}
+            <li><a href="{{path}}">{{title}}</a>
+          {{/children}}
+        </ul>
+      {{/has_children}}
+  </li>
+  {{/navigation}}
+</ul>
