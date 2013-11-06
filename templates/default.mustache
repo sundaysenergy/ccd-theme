@@ -77,61 +77,18 @@
         <div class="col-md-8 col-md-offset-2">
           <div class="row">
             <div class="col-md-3 menu">
-              <ul>
-                <!-- Home -->
-                <li><a href="/node/1" title="">Home</a></li>
-
-                <!-- About CCD -->
-                <li>
-                  <a href="/content/about-ccd" title="About CCD">About CCD</a>
-                  <ul>
-                    <li><a href="/content/board-directors" title="Board of Directors">Board of Directors</a></li>
-                  </ul>
+              <ul class="navigation">
+                {{#navigation}}
+                <li><a href="{{path}}" title="{{title}}"{{#active}} class="active"{{/active}}>{{title}}</a>
+                    {{#has_children}}
+                      <ul>
+                        {{#children}}
+                          <li><a href="{{path}}" title="{{title}}"{{#active}} class="active"{{/active}}>{{title}}</a>
+                        {{/children}}
+                      </ul>
+                    {{/has_children}}
                 </li>
-
-                <!-- A New Way to Solve Community Problems -->
-                <li>
-                  <a href="/content/new-way-solve-community-problems" title="A New Way to Solve Community Problems">A New Way to Solve Community Problems</a>
-                  <ul>
-                    <li><a href="/content/how-america-could-resolve-any-issue" title="How America Could Resolve Any Issue*">How America Could Resolve Any Issue</a></li>
-                    <li><a href="/content/how-your-community-can-find-representatives" title="How Your Community Can Assemble the “Right” Representatives">How Your Community Can Find the “Right” Representatives</a></li>
-                    <li><a href="/content/frequently-asked-questions" title="Frequently Asked Questions">Frequently Asked Questions</a></li>
-                  </ul>
-                </li>
-
-                <!-- Alternative ways to choose representatives -->
-                <li>
-                  <a href="/content/alternative-ways-choose-representatives" title="Alternative Ways to Choose Representatives">Alternative Ways to Choose Representatives</a>
-                  <ul>
-                    <li><a href="/content/single-transferable-vote" title="The Single Transferable Vote">The Single Transferable Vote</a></li>
-                  </ul>
-                </li>
-
-                <!-- Does your community need change? -->
-                <li>
-                  <a href="/content/does-your-community-need-change" title="Does Your Community Need a Change?">Does Your Community Need a Change?</a>
-                  <ul>
-                    <li><a href="/content/how-community-can-resolve-any-issue" title="I.  How a Community Can Resolve Any Issue">How a Community Can Resolve Any Issue</a></li>
-                    <li><a href="/content/steps-reform-your-community" title="Steps to Reform in Your Community*">Steps to Reform</a></li>
-                    <li><a href="/content/election-system-pros-and-cons-glance" title="Election System Pros and Cons at a Glance">Election System Pros and Cons at a Glance</a></li>
-                    <li><a href="/content/personally-accountable-representation" title="Personally Accountable Representation">Personally Accountable Representation at a Glance</a></li>
-                  </ul>
-                </li>
-
-                <!-- How any legislature can reach consensus -->
-                <li><a href="/content/how-any-legislature-can-reach-consensus" title="How Any Legislature Can Reach Consensus">How Any Legislature Can Reach Consensus</a></li>
-
-                <!-- How to fix America's broken government -->
-                <li><a href="/content/fix-americas-broken-government" title="How To Fix America's Broken Government">How To Fix America's Broken Government</a></li>
-
-                <!-- How companies can make better decisions -->
-                <li><a href="/content/how-companies-can-make-better-decisions" title="How Companies Can Make Better Decisions">How Companies Can Make Better Decisions</a></li>
-
-                <!-- Get involved -->
-                <li><a href="/content/get-involved" title="Get Involved">Get Involved</a></li>
-
-                <!-- Contact us -->
-                <li><a href="/contact" title="">Contact Us</a></li>
+                {{/navigation}}
               </ul>
             </div><!--./col-md-3-->
             <div class="col-md-9 content">
