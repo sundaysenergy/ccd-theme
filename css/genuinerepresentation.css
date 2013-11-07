@@ -4,6 +4,7 @@ body {
 }
 h1, h2 {
   color: #182654;
+  padding-top: 0;
 }
 .menubar {
   height: 42px;
