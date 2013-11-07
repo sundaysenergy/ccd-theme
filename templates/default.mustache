@@ -105,6 +105,7 @@
           current_path.replace("index.html", '');
           menu_path.replace("index.html", '');
           var re = new RegExp(menu_path, 'g');
+          console.log(current_path, menu_path, current_path.match(re));
           if (current_path.match(re) != null) {
             menu_item.find('ul').removeClass('collapse');
             if (menu_item.hasClass('menu-collapsible')) {
