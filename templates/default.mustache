@@ -103,7 +103,7 @@
           var current_path = window.location.pathname,
               menu_path = $(this).find('a').attr('href');
           current_path.replace("index.html", '');
-          menu_item.replace("index.html", '');
+          menu_path.replace("index.html", '');
           var re = new RegExp(menu_path, 'g');
           if (current_path.match(re) != null) {
             menu_item.find('ul').removeClass('collapse');
