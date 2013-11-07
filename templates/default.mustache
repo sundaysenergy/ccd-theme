@@ -79,8 +79,10 @@
           var re = new RegExp(menu_path, 'g');
           console.log(re);
           console.log(current_path.match(re));
-          if (current_path.match(re).length > 0 && current_path != "/" && current_path != "/index.html") {
-            menu_item.siblings('ul').removeClass('collapse');
+          if (current_path.match(re) != null) {
+            if (current_path.match(re).length > 0 && current_path != "/" && current_path != "/index.html") {
+              menu_item.siblings('ul').removeClass('collapse');
+            }
           }
         });
       });
