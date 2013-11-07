@@ -43,7 +43,7 @@
                 {{#data.navigation}}
                 <li><a href="{{path}}" title="{{title}}"{{#active}} class="active"{{/active}}>{{title}}</a>
                     {{#has_children}}
-                      <ul>
+                      <ul class="collapse">
                         {{#children}}
                           <li><a href="{{path}}" title="{{title}}"{{#active}} class="active"{{/active}}>{{title}}</a>
                         {{/children}}
