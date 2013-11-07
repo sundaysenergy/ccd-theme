@@ -107,8 +107,8 @@
           if (current_path.match(re) != null) {
             menu_item.find('ul').removeClass('collapse');
             if (menu_item.hasClass('menu-collapsible')) {
-              menu_item.removeClass('menu-collapsible').addClass('menu-collapsed');
-            }
+              menu_item.removeClass('menu-collapsible').addClass('menu-collapsed').css('list-style-type', 'none');
+            } 
           }
         });
       });
