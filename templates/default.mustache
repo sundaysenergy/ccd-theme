@@ -35,7 +35,7 @@
       width: 1.2em;
     }​
     .menu-collapsed {
-      list-style-type: none;
+      list-style-type: none !important;
     }
     .menu-collapsed:before {
       content: "\f0d7";
@@ -106,7 +106,9 @@
           var re = new RegExp(menu_path, 'g');
           if (current_path.match(re) != null) {
             menu_item.find('ul').removeClass('collapse');
-            menu_item.removeClass('menu-collapsible').addClass('menu-collapsed');
+            if (menu_item).hasClass('menu-collapsible') {
+              menu_item.removeClass('menu-collapsible').addClass('menu-collapsed');
+            }
           }
         });
       });
