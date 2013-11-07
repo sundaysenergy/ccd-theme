@@ -6,6 +6,9 @@ h1, h2 {
   color: #182654;
   padding-top: 0;
 }
+a.active {
+  color: #000;
+}
 .content h2 {
   text-align: center;
 }
