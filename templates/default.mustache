@@ -74,7 +74,10 @@
         $('.menu > ul > li').each(function(index) {
           var current_path = window.location.pathname,
               menu_path = $(this).find('a').attr('href'));
+          console.log(current_path, menu_path);
           var re = new RegExp(menu_path, 'g');
+          console.log(re);
+          console.log(current_path.match(re));
           if (current_path.match(re) && current_path != "/" && current_path != "/index.html") {
             $(this).siblings('ul').removeClass('collapse');
           }
