@@ -41,7 +41,7 @@
             <div class="col-md-3 menu">
               <ul class="navigation">
                 {{#data.navigation}}
-                <li><a href="{{path}}" title="{{title}}"{{#active}} class="active"{{/active}}>{{title}}</a>
+                <li{{#has_children}} class="collapsable"{{/has_children}}><a href="{{path}}" title="{{title}}"{{#active}} class="active"{{/active}}>{{title}}</a>
                     {{#has_children}}
                       <ul class="collapse">
                         {{#children}}
@@ -52,7 +52,7 @@
                 </li>
                 {{/data.navigation}}
               </ul>
-            </div><!--./col-md-3--> 
+            </div><!--./col-md-3-->
             <div class="col-md-9 content{{# page.post_class }} {{ page.post_class }}{{/ page.post_class }}">
               {{{ page.content }}}
             </div>
