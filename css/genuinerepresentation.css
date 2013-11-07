@@ -35,3 +35,26 @@ body {
   overflow: auto;
   padding-bottom: 20px;
 }
+.mainpage ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px;
+}
+.mainpage ul li:nth-of-type(1) {
+  background-color: #9cabcf;
+  padding: 10px;
+  margin: 5px;
+  float: right;
+  width: 45%;
+  border: 0.1em solid black;
+}
+@media screen and (max-width: 768px) {
+  .mainpage ul li:nth-of-type(1) {
+    float: none;
+    clear: both;
+    width: 100%;
+  }
+  .mainpage ul li {
+    width: 100%;
+  }
+}
