@@ -34,8 +34,12 @@
       margin-left: -0.8em;
       width: 0.8em; 
     }​
-    .menu li.collapsible {
-      list-style-type: disc;
+    .menu li.kai:after {
+      content: "\f10c";
+      font-family: FontAwesome;
+      display: inline-block;
+      margin-left: -0.8em;
+      width: 0.8em; 
     }​
     </style>
   </head>
@@ -61,7 +65,7 @@
             <div class="col-md-3 menu">
               <ul class="navigation">
                 {{#data.navigation}}
-                <li{{#has_children}} class="collapsible"{{/has_children}}><a href="{{path}}" title="{{title}}"{{#active}} class="active"{{/active}}>{{title}}</a>
+                <li{{#has_children}} class="kai"{{/has_children}}><a href="{{path}}" title="{{title}}"{{#active}} class="active"{{/active}}>{{title}}</a>
                     {{#has_children}}
                       <ul class="collapse">
                         {{#children}}
