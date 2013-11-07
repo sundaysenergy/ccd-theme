@@ -100,10 +100,8 @@
       $(document).ready(function() {
         $('.menu > ul > li').each(function(index) {
           var menu_item = $(this);
-          var current_path = window.location.pathname,
-              menu_path = $(this).find('a').attr('href');
-          current_path.replace("index.html", '');
-          menu_path.replace("index.html", '');
+          var current_path = window.location.pathname.replace("index.html", ''),
+              menu_path = $(this).find('a').attr('href').replace("index.html", '');
           var re = new RegExp(menu_path, 'g');
           console.log(current_path, menu_path, current_path.match(re));
           if (current_path.match(re) != null) {
