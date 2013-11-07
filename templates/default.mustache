@@ -104,7 +104,7 @@
               menu_path = $(this).find('a').attr('href');
           current_path.replace("index.html", '');
           var re = new RegExp(menu_path, 'g');
-          console.log(menu_item, current_path, re);
+          console.log(menu_path, current_path, re);
           if (current_path.match(re) != null) {
             menu_item.find('ul').removeClass('collapse');
             if (menu_item.hasClass('menu-collapsible')) {
