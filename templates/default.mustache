@@ -75,15 +75,10 @@
           var menu_item = $(this);
           var current_path = window.location.pathname,
               menu_path = $(this).find('a').attr('href');
-          console.log(current_path, menu_path);
+          current_path.replace("index.html", '');
           var re = new RegExp(menu_path, 'g');
-          console.log(re);
-          console.log(current_path.match(re));
           if (current_path.match(re) != null) {
-            if (current_path.match(re).length > 0 && current_path != "/" && current_path != "/index.html") {
-              console.log("got there!");
-              menu_item.find('ul').removeClass('collapse');
-            }
+            menu_item.find('ul').removeClass('collapse');
           }
         });
       });
