@@ -24,12 +24,16 @@
       padding-left: 15px;
       list-style: none;
     }
-    .menu li {
-      padding-left: 0.8em;
+    .collaps-ible {
+      padding-left: 1.2em;
+      list-style-type: none;
     }
-
-    .kai {
-      display: none !important;
+    .collaps-ible:before {
+      content: "\f0da";
+      font-family: FontAwesome;
+      display: inline-block;
+      margin-left: -1.2em;
+      width: 1.2em; 
     }​
     </style>
   </head>
@@ -55,7 +59,7 @@
             <div class="col-md-3 menu">
               <ul class="navigation">
                 {{#data.navigation}}
-                <li{{#has_children}} class="kai"{{/has_children}}><a href="{{path}}" title="{{title}}"{{#active}} class="active"{{/active}}>{{title}}</a>
+                <li{{#has_children}} class="collaps-ible"{{/has_children}}><a href="{{path}}" title="{{title}}"{{#active}} class="active"{{/active}}>{{title}}</a>
                     {{#has_children}}
                       <ul class="collapse">
                         {{#children}}
