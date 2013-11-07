@@ -24,11 +24,18 @@
       padding-left: 15px;
       list-style: circle;
     }
-    .collaps-ible {
+    .menu-collapsible {
       list-style-type: none;
     }
-    .collaps-ible:before {
+    .menu-collapsible:before {
       content: "\f0da";
+      font-family: FontAwesome;
+      display: inline-block;
+      margin-left: -1.2em;
+      width: 1.2em;
+    }​
+    .menu-collapsed:before {
+      content: "\f0d7";
       font-family: FontAwesome;
       display: inline-block;
       margin-left: -1.2em;
@@ -58,7 +65,7 @@
             <div class="col-md-3 menu">
               <ul class="navigation">
                 {{#data.navigation}}
-                <li{{#has_children}} class="menu-collapsed"{{/has_children}}><a href="{{path}}" title="{{title}}"{{#active}} class="active"{{/active}}>{{title}}</a>
+                <li{{#has_children}} class="menu-collapsible"{{/has_children}}><a href="{{path}}" title="{{title}}"{{#active}} class="active"{{/active}}>{{title}}</a>
                     {{#has_children}}
                       <ul class="collapse">
                         {{#children}}
@@ -96,6 +103,7 @@
           var re = new RegExp(menu_path, 'g');
           if (current_path.match(re) != null) {
             menu_item.find('ul').removeClass('collapse');
+            menu_item.removeClass('menu-collapsible').addClass('menu-collapsed');
           }
         });
       });
