@@ -6,6 +6,9 @@ h1, h2 {
   color: #182654;
   padding-top: 0;
 }
+.content h2 {
+  text-align: center;
+}
 .menubar {
   height: 42px;
   background-color: #EB1E1E;
