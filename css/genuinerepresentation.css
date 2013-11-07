@@ -63,4 +63,7 @@ body {
   .bluebar {
     font-size: 1.5em;
   }
+  body {
+    padding-top: 0;
+  }
 }
