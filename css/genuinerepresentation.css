@@ -57,4 +57,10 @@ body {
   .mainpage ul li {
     width: 100%;
   }
+  .menubar {
+    display: none;
+  }
+  .bluebar {
+    font-size: 1.5em;
+  }
 }
