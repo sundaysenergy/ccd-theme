@@ -40,7 +40,7 @@
           <div class="row">
             <div class="col-md-3 menu">
               <ul class="navigation">
-                {{#navigation}}
+                {{#data.navigation}}
                 <li><a href="{{path}}" title="{{title}}"{{#active}} class="active"{{/active}}>{{title}}</a>
                     {{#has_children}}
                       <ul>
@@ -50,7 +50,7 @@
                       </ul>
                     {{/has_children}}
                 </li>
-                {{/navigation}}
+                {{/data.navigation}}
               </ul>
             </div><!--./col-md-3-->
             <div class="col-md-9 content">
