@@ -5,6 +5,12 @@ body {
 h1, h2 {
   color: #182654;
   padding-top: 0;
+  font-weight: normal;
+  padding: 0 0 20px 0;
+  margin: 0;
+}
+h2 {
+  font-size: 24px;
 }
 a.active {
   color: #000;
@@ -38,6 +44,10 @@ a.active {
   margin-top: 15px;
   padding-top: 5px;
 }
+.content {
+  text-align: justify;
+  text-justify: inter-word;
+}
 .menu ul {
   padding-left: 15px;
 }
@@ -57,6 +67,9 @@ a.active {
   float: right;
   width: 45%;
   border: 0.1em solid black;
+}
+.board-of-directors p {
+  padding-bottom: 25px;
 }
 @media screen and (max-width: 768px) {
   .mainpage ul li:nth-of-type(1) {
