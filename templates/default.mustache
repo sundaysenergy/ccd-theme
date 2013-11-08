@@ -115,7 +115,7 @@
           var link = $(this).find('a').attr('href').replace("index.html", '').replace(/[\/]$/, '');
           console.log(current_path, link);
           if (current_path == link) {
-            $(this).find('a').addClass('active');
+            $(this).children('a').addClass('active');
           }
         });
       });
