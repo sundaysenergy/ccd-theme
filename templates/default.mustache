@@ -111,7 +111,7 @@
           }
         });
         $('li').each(function(index) {
-          var current_path = window.location.pathname.replace("index.html", ''),
+          var current_path = window.location.pathname.replace("index.html", '');
           var link = $(this).find('a').attr('href').replace("index.html", '');
           console.log(current_path, link);
           console.log(current_path.match(re));
