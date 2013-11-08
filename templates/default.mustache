@@ -110,6 +110,14 @@
             } 
           }
         });
+        $('li').each(function(index) {
+          var current_path = window.location.pathname.replace("index.html", ''),
+          var link = $(this).find('a').attr('href').replace("index.html", '');
+          var re = new RegExp(link + "[\/]?$", 'g');
+          if (current_path.match(re) != null) {
+            $(this).find('a').addClass('active');
+          }
+        });
       });
     </script>
   </body>
