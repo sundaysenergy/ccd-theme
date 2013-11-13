@@ -83,11 +83,11 @@
             <div class="col-md-3 menu">
               <ul class="navigation">
                 {{#data.navigation}}
-                <li{{#has_children}} class="menu-collapsible"{{/has_children}}><a href="{{path}}" title="{{title}}"{{#active}} class="active"{{/active}}>{{title}}</a>
+                <li{{#has_children}} class="menu-collapsible"{{/has_children}}><a href="{{&path}}" title="{{title}}"{{#active}} class="active"{{/active}}>{{title}}</a>
                     {{#has_children}}
                       <ul class="collapse">
                         {{#children}}
-                          <li><a href="{{path}}" title="{{title}}"{{#active}} class="active"{{/active}}>{{title}}</a>
+                          <li><a href="{{&path}}" title="{{title}}"{{#active}} class="active"{{/active}}>{{title}}</a>
                         {{/children}}
                       </ul>
                     {{/has_children}}
@@ -128,7 +128,7 @@
             menu_item.find('ul').removeClass('collapse');
             if (menu_item.hasClass('menu-collapsible')) {
               menu_item.removeClass('menu-collapsible').addClass('menu-collapsed').css('list-style-type', 'none');
-            } 
+            }
           }
         });
         $('li').each(function(index) {
