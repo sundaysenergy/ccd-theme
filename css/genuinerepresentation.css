@@ -1,7 +1,4 @@
 /* Author: Tim Lupfer */
-body {
-  font-family: "Futura","Trebuchet MS","Lucida Grande","Microsoft Sans Serif",Arial,Helvetica,sans-serif;
-}
 h1, h2 {
   color: #182654;
   padding-top: 0;
@@ -21,82 +18,15 @@ a.active {
 a:hover {
   color: #000;
 }
-
-.content h2 {
-  text-align: center;
-}
-.menubar {
-  height: 42px;
-  background-color: #EB1E1E;
-  border-bottom: 21px solid #B51919;
-}
-.bluebar {
-  color: #fff;
-  font-size: 2.5em;
-  background-color: #101A44;
-  padding: 25px 0;
-}
-.lightbluebar {
-  background-color: #9CABCF;
-  padding: 40px 0;
-  color: #fff;
-  text-align: center;
-}
-.menu {
-  font-family: Georgia,"Times New Roman",Times,serif;
-  border: 5px solid #ccc;
-  font-size: small;
-  padding: 20px;
-}
-.content,
-.menu {
-  margin-top: 15px;
-  padding-top: 5px;
-}
-.content {
-  text-align: justify;
-  text-justify: inter-word;
-}
-.menu ul {
-  padding-left: 15px;
-}
 .middle {
   overflow: auto;
   padding-bottom: 20px;
-}
-.mainpage ul {
-  list-style: none;
-  padding: 0;
-  margin: 10px;
-}
-.mainpage ul li:nth-of-type(1) {
-  background-color: #9cabcf;
-  padding: 10px;
-  margin-left: 17px;
-  margin-top: -10px;
-  float: right;
-  width: 45%;
-  border: 0.1em solid black;
 }
 .board-of-directors p {
   padding-bottom: 25px;
 }
 
 @media screen and (max-width: 768px) {
-  .mainpage ul li:nth-of-type(1) {
-    float: none;
-    clear: both;
-    width: 100%;
-  }
-  .mainpage ul li {
-    width: 100%;
-  }
-  .menubar {
-    display: none;
-  }
-  .bluebar {
-    font-size: 1.5em;
-  }
   body {
     padding-top: 0;
   }
