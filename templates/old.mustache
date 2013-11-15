@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>{{ page.title }}</title>
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="/css/genuinerepresentation.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <style>
+    body {
+      padding-top: 0;
+    }
+    .menu ul {
+      padding-left: 15px;
+      list-style: circle;
+    }
+    .menu-collapsible {
+      list-style-type: none;
+    }
+    .menu-collapsible:before {
+      content: "\f0da";
+      font-family: FontAwesome;
+      display: inline-block;
+      margin-left: -1.2em;
+      width: 1.2em;
+    }​
+    .menu ul .menu-collapsed {
+      list-style-type: none;
+    }
+    .menu-collapsed:before {
+      content: "\f0d7";
+      font-family: FontAwesome;
+      display: inline-block;
+      margin-left: -1.2em;
+      width: 1.2em;
+    }​
+    </style>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row-fluid hidden-xs" style="height:50px; margin-top: 10px">
+        <div class="col-sm-4 col-md-2 col-sm-offset-8">
+          <form role="form" id="gsearch">
+          <div class="input-group">
+            <input type="text" placeholder="Search" class="form-control">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+            </span>
+          </div>
+          </form>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="col-md-12 menubar">
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="col-md-12 bluebar">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              Center for Collaborative Democracy
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid middle">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="row">
+            <div class="col-md-3 menu">
+              <ul class="navigation">
+                {{#data.navigation}}
+                <li{{#has_children}} class="menu-collapsible"{{/has_children}}><a href="/old/{{&path}}" title="{{title}}"{{#active}} class="active"{{/active}}>{{title}}</a>
+                    {{#has_children}}
+                      <ul class="collapse">
+                        {{#children}}
+                          <li><a href="/old/{{&path}}" title="{{title}}"{{#active}} class="active"{{/active}}>{{title}}</a>
+                        {{/children}}
+                      </ul>
+                    {{/has_children}}
+                </li>
+                {{/data.navigation}}
+              </ul>
+            </div><!--./col-md-3-->
+            <div class="col-md-9 content{{# page.post_class }} {{ page.post_class }}{{/ page.post_class }}">
+              {{{ page.content }}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row-fluid">
+        <div class="col-md-12 lightbluebar">
+          Copyright 2013 by the Center for Collaborative Democracy
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#gsearch').on('submit', function(e) {
+          e.preventDefault();
+          if ($('#gsearch input[type=text]').val().length > 0) {
+            window.location = '/search/?q=' + encodeURIComponent($('#gsearch input[type=text]').val());
+          }
+        });
+        $('.menu > ul > li').each(function(index) {
+          var menu_item = $(this);
+          var current_path = window.location.pathname.replace("index.html", ''),
+              menu_path = $(this).find('a').attr('href').replace("index.html", '');
+          var re = new RegExp(menu_path, 'g');
+          if (current_path.match(re) != null) {
+            menu_item.find('ul').removeClass('collapse');
+            if (menu_item.hasClass('menu-collapsible')) {
+              menu_item.removeClass('menu-collapsible').addClass('menu-collapsed').css('list-style-type', 'none');
+            }
+          }
+        });
+        $('li').each(function(index) {
+          var current_path = window.location.pathname.replace("index.html", '').replace(/[\/]$/, '');
+          var link = '';
+          if (typeof($(this).find('a').attr('href')) != 'undefined') {
+            link = $(this).find('a').attr('href').replace("index.html", '').replace(/[\/]$/, '');
+          }
+          if (current_path == link) {
+            $(this).children('a').addClass('active');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
