@@ -101,6 +101,9 @@ a:hover {
     float: none;
     clear: both;
   }
+  #gsearch .form-group {
+    width: 220px;
+  }
 }
 @media screen and (max-width: 768px) {
   body {
