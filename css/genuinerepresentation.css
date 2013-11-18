@@ -71,6 +71,11 @@ a:hover {
   color: #fff;
   padding: 10px;
 }
+.phonehead a,
+.phonehead a:hover, 
+.phonehead a:active {
+  color: #fff;
+}
 
 
 /* Content specific */
