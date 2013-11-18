@@ -82,7 +82,7 @@ a:hover {
 
 
 /* Media specific */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   body {
     padding-top: 0;
   }
@@ -90,5 +90,10 @@ a:hover {
     width: 100%;
     float: none;
     clear: both;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    padding-top: 0;
   }
 }
