@@ -39,8 +39,8 @@ a:hover {
 .footer {
   background: none repeat scroll 0 0 #323232;
   border-top: 5px solid #A29F9C;
-  min-height: 150px;
-  padding-top: 60px;
+  min-height: 90px;
+  padding-top: 30px;
   text-align: center;
   color: #eee;
 }
