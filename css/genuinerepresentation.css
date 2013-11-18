@@ -36,6 +36,12 @@ a:hover {
   padding-right: 30px;
   padding-bottom: 10px;
 }
+.footer {
+  background: "none repeat scroll 0 0 #323232";
+  border-top: "5px solid #A29F9C";
+  min-height: 150px;
+  text-align: center;
+}
 @media screen and (max-width: 768px) {
   body {
     padding-top: 0;
