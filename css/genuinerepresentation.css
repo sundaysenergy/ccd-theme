@@ -30,6 +30,12 @@ a:hover {
 .mainhead {
   background: url(/media/bg-slider.jpg);
 }
+.mainpage img {
+  width: 50%;
+  float: left;
+  padding-right: 30px;
+  padding-bottom: 10px;
+}
 @media screen and (max-width: 768px) {
   body {
     padding-top: 0;
