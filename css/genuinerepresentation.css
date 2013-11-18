@@ -49,9 +49,10 @@ a:hover {
 /* Layout specific */
 .middle {
   overflow: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
   background-color: #F4F4F2;
+}
+.content {
+  padding: 20px 45px;
 }
 .footer {
   background: none repeat scroll 0 0 #323232;
