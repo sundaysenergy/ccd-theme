@@ -50,7 +50,7 @@
     <div class="container-fluid">
       <div class="row" style="background: url(/media/bg.jpg); padding-top: 60px;">
         <div class="col-sm-8 col-sm-offset-1">
-          <h1>Center for Collaborative Democracy</h1>
+          <h1><a href="/">Center for Collaborative Democracy</a></h1>
         </div>
       </div>
 
@@ -61,7 +61,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
                 {{#data.top_nav}}
-                <li {{#has_children}}class="dropdown"{{/has_children}}>
+                <li{{#has_children}} class="dropdown"{{/has_children}}>
                   <a href="{{path}}" {{#has_children}}class="dropdown-toggle" data-toggle="dropdown"{{/has_children}}>{{title}}{{#has_children}} <b class="caret"></b>{{/has_children}}</a>
                   {{#has_children}}
                     <ul class="dropdown-menu">
@@ -70,7 +70,6 @@
                       {{/children}}
                     </ul>
                   {{/has_children}}
-                  </ul>
                 </li>
                 {{/data.top_nav}}
               </ul>
