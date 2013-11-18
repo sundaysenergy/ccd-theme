@@ -67,6 +67,9 @@ a:hover {
 .mainhead {
   background: url(/media/bg-slider.jpg);
 }
+.phonehead {
+  color: #fff;
+}
 
 
 /* Content specific */
