@@ -1,4 +1,13 @@
 /* Author: Tim Lupfer */
+
+
+/* General */
+body {
+  padding-top: 0;
+  font-family: 'Times New Roman', serif;
+  font-size: 1.7em;
+  line-height: 1.5;
+}
 h1, h2 {
   color: #182654;
   padding-top: 0;
@@ -19,23 +28,30 @@ a.active {
 a:hover {
   color: #000;
 }
+
+
+/* Bootstrap overrides */ 
+.navbar-default {
+  background-color: transparent;
+  border: none;
+}
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+  color: #fff;
+  font-family: 'Droid Serif';
+}
+.navbar {
+  margin-bottom: 0;
+}
+
+
+/* Layout specific */
 .middle {
   overflow: auto;
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: #F4F4F2;
-}
-.board-of-directors p {
-  padding-bottom: 25px;
-}
-.mainhead {
-  background: url(/media/bg-slider.jpg);
-}
-.mainpage img {
-  width: 50%;
-  float: left;
-  padding-right: 30px;
-  padding-bottom: 10px;
 }
 .footer {
   background: none repeat scroll 0 0 #323232;
@@ -45,6 +61,24 @@ a:hover {
   text-align: center;
   color: #8a8989;
 }
+.mainhead {
+  background: url(/media/bg-slider.jpg);
+}
+
+
+/* Content specific */
+.board-of-directors p {
+  padding-bottom: 25px;
+}
+.mainpage img {
+  width: 50%;
+  float: left;
+  padding-right: 30px;
+  padding-bottom: 10px;
+}
+
+
+/* Media specific */
 @media screen and (max-width: 768px) {
   body {
     padding-top: 0;
