@@ -86,4 +86,9 @@ a:hover {
   body {
     padding-top: 0;
   }
+  .mainpage img {
+    width: 100%;
+    float: none;
+    clear: both;
+  }
 }
