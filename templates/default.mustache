@@ -60,19 +60,19 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Programs <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Forum for Long-Term Prosperity</a></li>
-                    <li><a href="#">New Ways to Solve Community Problems</a></li>
-                    <li><a href="#">How Any Legislature Can Reach Consensus</a></li>
-                    <li><a href="#">Fixing America's Broken Government</a></li>
-                    <li><a href="#">How Companies Can Make Better Decisions</a></li>
+                {{#data.top_nav}}
+                <li {{#has_children}}class="dropdown"{{/has_children}}>
+                  <a href="{{path}}" {{#has_children}}class="dropdown-toggle" data-toggle="dropdown"{{/has_children}}>{{title}}{{#has_children}} <b class="caret"></b>{{/has_children}}</a>
+                  {{#has_children}}
+                    <ul class="dropdown-menu">
+                      {{#children}}
+                        <li><a href="{{path}}">{{title}}</a></li>
+                      {{/children}}
+                    </ul>
+                  {{/has_children}}
                   </ul>
                 </li>
-                <li class="active"><a href="#">About</a></li>
-                <li><a href="#">Get Involved</a></li>
-                <li><a href="#">Contact Us</a></li>
+                {{/data.top_nav}}
               </ul>
               <form class="navbar-form navbar-right" role="search" id="gsearch">
                 <div class="form-group">
