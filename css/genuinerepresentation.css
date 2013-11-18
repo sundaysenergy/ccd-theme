@@ -4,7 +4,7 @@
 /* General */
 body {
   padding-top: 0;
-  font-family: 'Times New Roman', serif;
+  font-family: 'Lora', serif;
   font-size: 1.7em;
   line-height: 1.5;
 }
@@ -39,7 +39,7 @@ a:hover {
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-nav>li>a:focus {
   color: #fff;
-  font-family: 'Droid Serif';
+  font-family: 'Cardo', serif;
 }
 .navbar {
   margin-bottom: 0;
