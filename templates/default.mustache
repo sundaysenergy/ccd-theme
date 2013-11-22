@@ -74,6 +74,13 @@
           <div class="row">
             <div class="col-sm-12 content{{# page.post_class }} {{ page.post_class }}{{/ page.post_class }}">
               {{{ page.content }}}
+              {{#sitemap}}
+                <ul>
+                {{#pages}}
+                  <li><a href="/{{_no_ext}}.html">{{title}}</a></li>
+                {{/pages}}
+                </ul>
+              {{/sitemap}}
             </div>
           </div>
         </div>
