@@ -83,11 +83,11 @@
             <div class="col-md-3 menu">
               <ul class="navigation">
                 {{#data.navigation}}
-                <li{{#has_children}} class="menu-collapsible"{{/has_children}}><a href="/old/{{&path}}" title="{{title}}"{{#active}} class="active"{{/active}}>{{title}}</a>
+                <li{{#has_children}} class="menu-collapsible"{{/has_children}}><a href="/old{{&path}}" title="{{title}}"{{#active}} class="active"{{/active}}>{{title}}</a>
                     {{#has_children}}
                       <ul class="collapse">
                         {{#children}}
-                          <li><a href="/old/{{&path}}" title="{{title}}"{{#active}} class="active"{{/active}}>{{title}}</a>
+                          <li><a href="/old{{&path}}" title="{{title}}"{{#active}} class="active"{{/active}}>{{title}}</a>
                         {{/children}}
                       </ul>
                     {{/has_children}}
