@@ -77,7 +77,7 @@
               {{#sitemap}}
                 <ul>
                 {{#pages}}
-                  <li><a href="/{{_no_ext}}.html">{{title}}</a></li>
+                  <li><a href="/{{no_ext}}.html">{{title}}{{^title}}{{name}}{{/title}}</a></li>
                 {{/pages}}
                 </ul>
               {{/sitemap}}
